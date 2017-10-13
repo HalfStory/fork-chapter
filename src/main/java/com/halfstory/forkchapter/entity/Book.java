@@ -1,5 +1,8 @@
 package com.halfstory.forkchapter.entity;
 
+import lombok.Data;
+
+@Data
 public class Book {
     private Integer bookId;
 
@@ -7,27 +10,7 @@ public class Book {
 
     private String desc;
 
-    public Integer getBookId() {
-        return bookId;
-    }
+    private String starter;
 
-    public void setBookId(Integer bookId) {
-        this.bookId = bookId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc == null ? null : desc.trim();
-    }
+    private Integer starterId;
 }

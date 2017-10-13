@@ -11,3 +11,4 @@ gen
 .idea/
 forkchapter.iml
 target/
+src/main/java/com/halfstory/forkchapter/service/
