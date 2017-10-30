@@ -2,20 +2,29 @@ package com.halfstory.forkchapter.common.bean;
 
 /**
  * Enum 响应类型
+ *
+ * @author xu
+ * @date 2017/10/16
  */
 public enum ExceptionType {
-    SUCCESS("00", "success", 0),
-    SYSTEM_ERROR("400001", "系统错误", 5),
-    BOOK_EXIST("400002", "本书名已存在", 3);
+    //异常
+    SUCCESS("00", "success", Level.ignore),
+    SYSTEM_ERROR("400001", "系统错误", Level.high),
+    BOOK_EXIST("400002", "本书名已存在", Level.ignore);
 
     private String code;
     private String message;
     private int level;
 
-    ExceptionType(String code, String message, int level) {
+    /**
+     * @param code    异常码
+     * @param message 对外输出信息
+     * @param level   异常等级
+     */
+    ExceptionType(String code, String message, Level level) {
         this.code = code;
         this.message = message;
-        this.level = level;
+        this.level = level.getLevel();
     }
 
     public String getCode() {
