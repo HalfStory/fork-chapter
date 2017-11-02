@@ -10,7 +10,8 @@ public enum ExceptionType {
     //异常
     SUCCESS("00", "success", Level.ignore),
     SYSTEM_ERROR("400001", "系统错误", Level.high),
-    BOOK_EXIST("400002", "本书名已存在", Level.ignore);
+    BOOK_EXIST("400002", "本书名已存在", Level.ignore),
+    STAR_STATUS_ERROR("400003", "点赞状态错误", Level.ignore);
 
     private String code;
     private String message;

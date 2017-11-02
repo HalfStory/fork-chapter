@@ -72,4 +72,20 @@ public interface ChapterMapper {
      */
     @Update("update chapter set fork=fork+1 where book_id=#{book_id} and chapter_id=#{chapter_id}")
     void updateFork(@Param("book_id") Integer bookId, @Param("chapter_id") Integer chapterId);
+
+    /**
+     * 增加章节总点赞数
+     *
+     * @param chapterId 章节号
+     */
+    @Update("update chapter set star=star+1  where chapter_id = #{book_id}")
+    void addBookStar(@Param("chapter_id") Integer chapterId);
+
+    /**
+     * 减少章节总点赞数
+     *
+     * @param chapterId 章节号
+     */
+    @Update("update chapter set star=star-1  where chapter_id = #{book_id}")
+    void reduceBookStar(@Param("chapter_id") Integer chapterId);
 }

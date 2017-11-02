@@ -23,4 +23,9 @@ public class Book {
     private Integer totalChapter;
 
     private Integer masterChapter;
+
+    /**
+     * 点赞数
+     */
+    private Integer star;
 }
