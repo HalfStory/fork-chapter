@@ -13,6 +13,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
+/**
+ * 数据库配置
+ *
+ * @author xu
+ * @date 2017/11/08
+ */
 @Configuration
 @EnableTransactionManagement
 @MapperScan(basePackages = DataSourceConfig.PACKAGE, sqlSessionFactoryRef = "SqlSessionFactory")
